@@ -846,11 +846,18 @@ img {
   margin: 0 auto 20px;
   max-width: 520px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 4px;
   animation: fadeInUp 0.5s ease-out, subtlePulse 3s ease-in-out infinite;
   box-shadow: 0 4px 20px rgba(233, 69, 96, 0.15);
+}
+
+.hero-local-stat > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .hero-local-stat .local-stat-icon {
@@ -867,6 +874,13 @@ img {
 
 .hero-local-stat .local-stat-text strong {
   color: var(--color-primary-light);
+}
+
+.hero-local-stat .local-stat-disclaimer {
+  font-size: 10px;
+  opacity: 0.6;
+  color: var(--color-text-muted);
+  text-align: center;
 }
 
 @keyframes subtlePulse {

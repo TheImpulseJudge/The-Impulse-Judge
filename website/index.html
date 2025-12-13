@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- DNS Prefetch for external domains to speed up connections -->
+  <link rel="dns-prefetch" href="//ipapi.co">
+  <link rel="dns-prefetch" href="//buymeacoffee.com">
+  <link rel="dns-prefetch" href="//sibforms.com">
+  <link rel="dns-prefetch" href="//addons.mozilla.org">
+  <link rel="dns-prefetch" href="//microsoftedge.microsoft.com">
+  
   <title>The Impulse Judge™ - Stop Impulse Buying with Humor| 100% Free & Private |  Chrome • Firefox • Edge Extension</title>
   <meta name="description" content="100% Free and Private browser extension that stops impulse buying with humor! Get roasted when you try to checkout, earn achievements, track savings. Works on most shopping sites.">
   <meta name="keywords" content="impulse buying, stop doom spending, adhd tax tools, shopping addiction help, financial discipline, save money extension, anti-honey, retail therapy alternative, stop buying useless stuff, money saving app, budget tool">
@@ -60,7 +68,7 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "The Impulse Judge",
-    "description": "A free and private browser extension that helps you stop impulse buying with humor, accountability, and gamification. Get roasted when you try to checkout impulsively.",
+    "description": "A free and private browser extension that helps you stop impulse buying with humor, accountability, and gamification. Get roasted when you try to checkout.",
     "url": "https://theimpulsejudge.com/",
     "image": "https://theimpulsejudge.com/screenshots/OpenGraphPromoTile.jpg",
     "screenshot": "https://theimpulsejudge.com/screenshots/ImpulseJudge-Screenshot-1.jpg",
@@ -80,7 +88,7 @@
       "200+ unique roasts",
       "20 achievements to unlock",
       "Money savings tracker",
-      "Works on all shopping sites",
+      "Works on most shopping sites",
       "Privacy-focused - no tracking"
     ]
   }
@@ -222,8 +230,11 @@
         </p>
         <p class="hero-origin">Built by a reformed impulse buyer who once owned 4 air fryers.</p>
         <div class="hero-local-stat" id="hero-local-stat" style="display: none;">
-          <span class="local-stat-icon">📍</span>
-          <span class="local-stat-text" id="local-stat-text"></span>
+          <div>
+            <span class="local-stat-icon">📍</span>
+            <span class="local-stat-text" id="local-stat-text"></span>
+          </div>
+          <span class="local-stat-disclaimer">*Approximate regional averages for illustration</span>
         </div>
         <div class="hero-buttons">
           <a href="https://addons.mozilla.org/en-CA/firefox/addon/the-impulse-judge/" class="btn btn-primary btn-lg btn-judge" target="_blank" rel="noopener">
@@ -288,7 +299,7 @@
         <!-- Discord Invite Card -->
         <a href="https://discord.gg/qmAsM5de6Q" target="_blank" rel="noopener" class="hero-discord-invite">
           <div class="hero-discord-content">
-            <img src="/icons/Discord-Symbol-Blurple.png" alt="Discord" class="hero-discord-logo">
+            <img src="icons/Discord-Symbol-Blurple.png" alt="Discord" class="hero-discord-logo">
             <div class="hero-discord-text">
               <span class="hero-discord-title">Enter The Courtroom</span>
               <span class="hero-discord-subtitle">Public roast confessions • Feature suggestions • Judge's decrees</span>

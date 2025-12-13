@@ -164,7 +164,7 @@ We are NOT responsible for malware, tracking, or functionality issues in unoffic
 | **Streak Counter** | Build a resist streak and feel superior to your past self |
 | **Googly Eyes** | The Judge watches you. Those eyes follow your cursor. You are being observed. |
 | **Opportunity Cost Calculator** | Shows you that $47 is also 47 hours of work or 140 coffees. Perspective hurts. |
-| **Voice Narration** | (Optional) Hear your shame read aloud by The Judge himself |
+| **Voice Narration** | (Optional) Uses browser's built-in text-to-speech to read roasts aloud |
 | **Confetti Cannon** | Because saying "no" deserves a party |
 | **Monthly Budget** | Set a spending cap, as if you are going to follow it |
 | **Site Management** | "Only Sites" and "Never Sites" give you total control over where The Judge appears |
@@ -261,7 +261,7 @@ The following are **© The Impulse Judge Project** and may NOT be used without p
 
 **Branding & Identity:**
 - "The Impulse Judge" and "Impulse Judge" names
-- The Judge character, persona, and voice
+- The Judge character and persona
 - Original visual designs and artwork we created
 - Marketing taglines and slogans
 
