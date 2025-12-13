@@ -4508,6 +4508,28 @@ img {
   transition: opacity 0.2s;
 }
 
+/* Game Mute Buttons */
+.game-mute-btn {
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  pointer-events: all;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+.game-mute-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.game-mute-btn:active {
+  transform: scale(0.95);
+}
+
 /* Infinite Floor */
 .dash-ground {
   position: absolute;
@@ -4756,6 +4778,13 @@ img {
   
   .dash-receipt-title {
     font-size: 16px;
+  }
+  
+  .dash-btn {
+    padding: 12px 16px;
+    font-size: 13px;
+    width: 90%;
+    max-width: 200px;
   }
   
   .dash-guilty {
