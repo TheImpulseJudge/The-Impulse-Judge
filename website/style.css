@@ -4611,6 +4611,7 @@ img {
 
 .dash-hidden {
   display: none !important;
+  pointer-events: none !important;
 }
 
 /* HUD */
@@ -4619,7 +4620,7 @@ img {
   top: 15px;
   right: 20px;
   text-align: right;
-  z-index: 10;
+  z-index: 30;
   pointer-events: none;
 }
 
@@ -4787,6 +4788,7 @@ img {
   color: white;
   text-align: center;
   backdrop-filter: blur(2px);
+  pointer-events: auto;
 }
 
 /* Receipt Card */
@@ -4876,6 +4878,7 @@ img {
   width: 100%;
   align-items: center;
   z-index: 30;
+  pointer-events: auto;
 }
 
 .dash-btn {
@@ -4891,6 +4894,9 @@ img {
   transition: transform 0.1s;
   width: 85%;
   max-width: 240px;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .dash-btn:active {
@@ -5282,26 +5288,26 @@ img {
   }
   
   .defense-shop-grid {
-    gap: 4px;
-    padding: 4px;
+    gap: 3px;
+    padding: 3px;
   }
   
   .defense-card {
-    width: 48px;
-    height: 54px;
+    width: 42px;
+    height: 48px;
   }
   
   .defense-card-icon {
-    font-size: 18px;
-    margin-bottom: 1px;
+    font-size: 16px;
+    margin-bottom: 0;
   }
   
   .defense-card-name {
-    font-size: 6px;
+    font-size: 5px;
   }
   
   .defense-card-cost {
-    font-size: 8px;
+    font-size: 7px;
   }
   
   .defense-overlay-title {
@@ -5331,26 +5337,26 @@ img {
   }
   
   .defense-shop-grid {
-    gap: 3px;
-    padding: 3px;
+    gap: 2px;
+    padding: 2px;
   }
   
   .defense-card {
-    width: 42px;
-    height: 48px;
+    width: 36px;
+    height: 42px;
   }
   
   .defense-card-icon {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 0;
   }
   
   .defense-card-name {
-    font-size: 5px;
+    font-size: 4px;
   }
   
   .defense-card-cost {
-    font-size: 7px;
+    font-size: 6px;
   }
   
   .defense-card-key {

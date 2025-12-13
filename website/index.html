@@ -4576,6 +4576,11 @@ Can you save more?`;
           cancelAnimationFrame(this.frameId);
           this.frameId = null;
         }
+        // Critical: Clear countdown interval to prevent stuck "Starting in 1..." bug
+        if (this.countdownInterval) {
+          clearInterval(this.countdownInterval);
+          this.countdownInterval = null;
+        }
       },
 
       resume() {
@@ -4586,6 +4591,16 @@ Can you save more?`;
           this.lastTime = performance.now();
           if (this.frameId) cancelAnimationFrame(this.frameId);
           this.frameId = requestAnimationFrame(t => this.loop(t));
+          
+          // Restart wave countdown if not in active wave
+          if (!this.waveActive && this.wave > 0) {
+            const btn = document.getElementById('defense-btn-wave');
+            if (btn && btn.innerText.includes('Starting in')) {
+              // Reset button if it was stuck in countdown
+              btn.innerText = 'Next Wave';
+              btn.style.opacity = '1';
+            }
+          }
         }
       },
 
