@@ -884,7 +884,7 @@ img {
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 
 .hero-stats {
@@ -923,7 +923,7 @@ img {
    ============================================ */
 .section-header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 36px;
 }
 
 .section-title {
@@ -944,7 +944,7 @@ img {
    HOW IT WORKS
    ============================================ */
 .how-it-works {
-  padding: 80px 0;
+  padding: 64px 0;
   background: var(--color-bg-light);
   position: relative;
   z-index: 2;
@@ -1098,7 +1098,7 @@ img {
    SCREENSHOTS
    ============================================ */
 .screenshots {
-  padding: 100px 0;
+  padding: 64px 0;
   background: var(--color-bg-light);
   position: relative;
   z-index: 2;
@@ -1547,11 +1547,12 @@ img {
   background: rgba(233, 69, 96, 0.15);
   border: 1px solid rgba(233, 69, 96, 0.3);
   color: var(--color-primary-light);
-  padding: 8px 20px;
+  padding: 10px 24px;
   border-radius: 50px;
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
 }
 
 .screenshot-placeholder span {
@@ -1575,7 +1576,7 @@ img {
    ROASTS SECTION
    ============================================ */
 .roasts {
-  padding: 80px 0;
+  padding: 64px 0;
   position: relative;
   z-index: 2;
 }
@@ -1673,7 +1674,7 @@ img {
    FAQ SECTION
    ============================================ */
 .faq {
-  padding: 100px 0 40px;
+  padding: 64px 0 32px;
   position: relative;
   z-index: 2;
   background: linear-gradient(180deg, transparent 0%, rgba(15, 15, 26, 0.5) 100%);
@@ -1795,7 +1796,7 @@ img {
    INSTALL CTA
    ============================================ */
 .install-cta {
-  padding: 100px 0;
+  padding: 64px 0;
   background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(46, 204, 113, 0.05) 100%);
   position: relative;
   z-index: 2;
@@ -2084,7 +2085,7 @@ img {
    SAVINGS CALCULATOR
    ============================================ */
 .savings-calc {
-  padding: 60px 0;
+  padding: 48px 0;
   background: var(--color-bg);
 }
 
@@ -2095,8 +2096,8 @@ img {
 
 .calc-inputs {
   display: flex;
-  gap: 40px;
-  margin-bottom: 40px;
+  gap: 32px;
+  margin-bottom: 32px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -2250,7 +2251,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   flex-wrap: wrap;
 }
 
@@ -3840,7 +3841,7 @@ img {
 
 /* Blog Bottom CTA */
 .blog-bottom-cta {
-  padding: 80px 0;
+  padding: 64px 0;
   text-align: center;
 }
 
@@ -4367,7 +4368,7 @@ img {
    FIDGET SAVER BUTTON
    ============================================ */
 .fidget-section {
-  padding: 80px 0;
+  padding: 60px 0;
   background: linear-gradient(180deg, var(--color-bg) 0%, #16213e 100%);
   position: relative;
   overflow: hidden;
@@ -4380,7 +4381,7 @@ img {
 }
 
 .fidget-header {
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
 .fidget-title {
@@ -6514,7 +6515,7 @@ img {
    CERTIFICATE OF SOBRIETY - PREMIUM EDITION
    ============================================ */
 .certificate-section {
-  padding: 80px 0;
+  padding: 64px 0;
   background: var(--color-bg);
   position: relative;
 }
@@ -6526,7 +6527,7 @@ img {
 }
 
 .certificate-header {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .certificate-title {
@@ -7696,7 +7697,7 @@ img {
    NEWSLETTER SECTION (Brevo)
    ============================================ */
 .newsletter-section {
-  padding: 80px 0;
+  padding: 64px 0;
   position: relative;
   z-index: 2;
   background: linear-gradient(180deg, transparent 0%, rgba(233, 69, 96, 0.05) 50%, transparent 100%);
