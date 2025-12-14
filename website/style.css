@@ -2692,12 +2692,17 @@ input[type="number"] {
 /* Mobile Responsive */
 @media (max-width: 600px) {
   .calc-tabs {
-    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 4px;
   }
   
   .calc-tab {
-    padding: 10px 16px;
-    font-size: 13px;
+    padding: 12px 8px;
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
   }
   
   .time-cost-inputs {
@@ -4633,39 +4638,82 @@ input[type="number"] {
   color: var(--color-secondary);
 }
 
-/* Therapy Tabs - grid layout with spacing */
+/* Therapy Tabs - Clean responsive grid layout */
 .therapy-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
   margin-bottom: 30px;
-  padding: 0 10px;
+  padding: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Last row with 1 item - center it */
+.therapy-tabs .therapy-tab:nth-child(13) {
+  grid-column: 2 / 4;
 }
 
 .therapy-tab {
-  padding: 10px 16px;
-  background: transparent;
-  border: 2px solid var(--color-border);
-  border-radius: 50px;
+  padding: 12px 8px;
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   color: var(--color-text-muted);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   white-space: nowrap;
-  flex-shrink: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 
 .therapy-tab:hover {
   border-color: var(--color-primary);
   color: var(--color-primary);
+  background: rgba(233, 69, 96, 0.05);
 }
 
 .therapy-tab.active {
   background: var(--color-primary);
   border-color: var(--color-primary);
   color: white;
+  box-shadow: 0 2px 8px rgba(233, 69, 96, 0.3);
+}
+
+/* Tablet - 3 columns */
+@media (max-width: 768px) {
+  .therapy-tabs {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 500px;
+  }
+  
+  .therapy-tabs .therapy-tab:nth-child(13) {
+    grid-column: 2 / 3;
+  }
+}
+
+/* Mobile - 2 columns */
+@media (max-width: 480px) {
+  .therapy-tabs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    max-width: 100%;
+  }
+  
+  .therapy-tab {
+    padding: 10px 6px;
+    font-size: 11px;
+  }
+  
+  .therapy-tabs .therapy-tab:nth-child(13) {
+    grid-column: 1 / 3;
+  }
 }
 
 .therapy-content {
