@@ -1,10 +1,13 @@
-# Environment variables
+# Environment variables (if added in future)
 .env
 .env.local
 .env.production
 .env.*.local
 
-# API keys and secrets
+# Internal
+internal.md
+
+# API keys and secrets (if added in future)
 **/config/secrets.json
 **/config/api-keys.json
 
@@ -13,7 +16,7 @@ node_modules/
 package-lock.json
 yarn.lock
 
-# IDE and editor files
+# IDE and editor files 
 .vscode/
 .idea/
 *.swp
@@ -35,7 +38,7 @@ tmp/
 temp/
 *.tmp
 
-# Experiments (#HighlyConfidental)
+# Experiments (#TopSecret)
 experiment*.html
 
 # OS files

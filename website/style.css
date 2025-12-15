@@ -3541,6 +3541,52 @@ input[type="number"] {
 }
 
 /* ============================================
+   FOCUS STATES - ACCESSIBILITY (WCAG 2.4.7)
+   ============================================ */
+
+/* Visible focus for keyboard navigation */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Ensure focus is visible on dark backgrounds */
+.btn:focus-visible {
+  outline: 3px solid var(--color-primary-light);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px rgba(233, 69, 96, 0.2);
+}
+
+/* Therapy tabs focus */
+.therapy-tab-btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Calculator tabs focus */
+.calc-tab-btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* FAQ items focus */
+.faq-question:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Card-like links focus */
+.feedback-card:focus-visible,
+.hero-discord-invite:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+/* ============================================
    HERO DISCORD INVITE CARD
    ============================================ */
 .hero-discord-invite {
@@ -8823,5 +8869,16 @@ input[type="number"] {
     width: 100%;
     max-width: 240px;
   }
+}
+
+/* ============================================
+   UTILITY: Button icon spacing
+   ============================================ */
+.btn-icon {
+  margin-right: 8px;
+}
+
+.sticky-install-btn .btn-icon {
+  margin-right: 6px;
 }
 

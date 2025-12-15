@@ -49,10 +49,7 @@
   <meta name="msapplication-TileColor" content="#e94560">
   <meta name="msapplication-TileImage" content="/icon.png">
   
-  <!-- LinkedIn -->
-  <meta property="og:image" content="https://theimpulsejudge.com/screenshots/OpenGraphPromoTile.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <!-- LinkedIn: Uses same og:image as Open Graph (no separate tag needed) -->
   
   <!-- Additional Discovery -->
   <meta name="rating" content="General">
@@ -153,6 +150,12 @@
   }
   </script>
   
+  <!-- Preload critical resources for faster LCP -->
+  <link rel="preload" href="icon.png" as="image" type="image/png">
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+  
   <!-- Self-hosted Inter font for privacy compliance (no Google CDN requests) -->
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="style.css">
@@ -213,7 +216,7 @@
     <div class="container">
       <div class="hero-content">
         <div class="judge-face">
-          <img src="icon.png" alt="The Impulse Judge" class="hero-logo" width="80" height="80">
+          <img src="icon.png" alt="The Impulse Judge" class="hero-logo" width="80" height="80" fetchpriority="high" decoding="async">
         </div>
         <div class="eyes-container" id="eyes-container">
           <div class="eye" id="eye-left" data-poked="false"><div class="pupil"></div></div>
@@ -238,15 +241,15 @@
         </div>
         <div class="hero-buttons">
           <a href="https://addons.mozilla.org/en-CA/firefox/addon/the-impulse-judge/" class="btn btn-primary btn-lg btn-judge" target="_blank" rel="noopener">
-            <img src="icons/firefox.png" alt="Firefox" width="20" height="20" style="margin-right: 8px;">
+            <img src="icons/firefox.png" alt="Firefox" width="20" height="20" class="btn-icon" loading="lazy" decoding="async">
             <span>Add to Firefox</span>
           </a>
           <a href="https://microsoftedge.microsoft.com/addons/detail/the-impulse-judge-financ/fkanlpmkecccloaipnihnnhjioamocbl" class="btn btn-primary btn-lg btn-judge" target="_blank" rel="noopener">
-            <img src="icons/edge.png" alt="Edge" width="20" height="20" style="margin-right: 8px;">
+            <img src="icons/edge.png" alt="Edge" width="20" height="20" class="btn-icon" loading="lazy" decoding="async">
             <span>Add to Edge</span>
           </a>
           <a href="#install" class="btn btn-primary btn-lg btn-judge btn-disabled" style="opacity: 0.6; cursor: not-allowed;" onclick="alert('Chrome Web Store submission pending review. Check back soon!'); return false;">
-            <img src="icons/chrome.png" alt="Chrome" width="20" height="20" style="margin-right: 8px;">
+            <img src="icons/chrome.png" alt="Chrome" width="20" height="20" class="btn-icon" loading="lazy" decoding="async">
             <span>Add to Chrome (Coming Soon)</span>
           </a>
         </div>
@@ -296,7 +299,7 @@
         <!-- Discord Invite Card -->
         <a href="https://discord.gg/qmAsM5de6Q" target="_blank" rel="noopener" class="hero-discord-invite">
           <div class="hero-discord-content">
-            <img src="icons/Discord-Symbol-Blurple.png" alt="Discord" class="hero-discord-logo">
+            <img src="icons/Discord-Symbol-Blurple.png" alt="Discord" class="hero-discord-logo" loading="lazy" decoding="async">
             <div class="hero-discord-text">
               <span class="hero-discord-title">Enter The Courtroom</span>
               <span class="hero-discord-subtitle">Public roast confessions • Feature suggestions • Judge's decrees</span>
@@ -397,7 +400,7 @@
         <div class="step-arrow">→</div>
         <div class="step animate-on-scroll animate-delay-2">
           <div class="step-number">2</div>
-          <div class="step-icon"><img src="icon.png" alt="The Impulse Judge" class="step-icon-img" width="64" height="64"></div>
+          <div class="step-icon"><img src="icon.png" alt="The Impulse Judge" class="step-icon-img" width="64" height="64" loading="lazy" decoding="async"></div>
           <h3>The Judge Intervenes</h3>
           <p>A modal appears with a personalized roast about your purchase decision.</p>
           <button class="step-preview-btn" onclick="openLightbox('screenshots/ImpulseJudge-Screenshot-1.jpg')">🔍 See it in action</button>
@@ -1390,7 +1393,7 @@
   <section id="install" class="install-cta">
     <div class="container">
       <div class="cta-content animate-on-scroll">
-        <img src="icon.png" alt="The Impulse Judge" class="cta-icon" width="80" height="80">
+        <img src="icon.png" alt="The Impulse Judge" class="cta-icon" width="80" height="80" loading="lazy" decoding="async">
         <h2>Ready to Save Money?</h2>
         <p>Join the growing army of people who've learned to ask 'Do I need this?' before 'Where's my credit card?' It's free, it's fun, and your wallet will thank you.</p>
         <div class="cta-trust-badge">
@@ -1424,15 +1427,15 @@
         </div>
         <div class="cta-buttons">
           <a href="#chrome-coming-soon" class="btn btn-primary btn-xl btn-store btn-disabled" onclick="alert('Chrome Web Store submission pending review. Check back soon!'); return false;">
-            <img src="icons/chrome.png" alt="Chrome" class="browser-logo" width="24" height="24">
+            <img src="icons/chrome.png" alt="Chrome" class="browser-logo" width="24" height="24" loading="lazy" decoding="async">
             <span>Chrome (Coming Soon)</span>
           </a>
           <a href="https://addons.mozilla.org/en-CA/firefox/addon/the-impulse-judge/" class="btn btn-primary btn-xl btn-store" target="_blank" rel="noopener">
-            <img src="icons/firefox.png" alt="Firefox" class="browser-logo" width="24" height="24">
+            <img src="icons/firefox.png" alt="Firefox" class="browser-logo" width="24" height="24" loading="lazy" decoding="async">
             <span>Add to Firefox</span>
           </a>
           <a href="https://microsoftedge.microsoft.com/addons/detail/the-impulse-judge-financ/fkanlpmkecccloaipnihnnhjioamocbl" class="btn btn-primary btn-xl btn-store" target="_blank" rel="noopener">
-            <img src="icons/edge.png" alt="Edge" class="browser-logo" width="24" height="24">
+            <img src="icons/edge.png" alt="Edge" class="browser-logo" width="24" height="24" loading="lazy" decoding="async">
             <span>Add to Edge</span>
           </a>
         </div>
@@ -1605,7 +1608,7 @@
           <p>Something broke? Got a brilliant idea? Either way, we're listening. Help us make The Impulse Judge<sup class="tm">™</sup> even more judgmental.</p>
         </a>
         <a href="https://discord.gg/qmAsM5de6Q" target="_blank" rel="noopener" class="feedback-card feedback-card-discord">
-          <img src="icons/Discord-Symbol-Blurple.png" alt="Discord" class="feedback-discord-logo">
+          <img src="icons/Discord-Symbol-Blurple.png" alt="Discord" class="feedback-discord-logo" loading="lazy" decoding="async">
           <h3>Join The Courtroom</h3>
           <p>Confess your purchases publicly, suggest features, and get judged by The Judge himself. Public Discord server, enter at your own risk.</p>
         </a>
@@ -1798,7 +1801,7 @@
               <div class="cert-inner">
                 <!-- Header -->
                 <div class="cert-logo">
-                  <img src="icon.png" alt="The Impulse Judge" width="70" height="70">
+                  <img src="icon.png" alt="The Impulse Judge" width="70" height="70" loading="lazy" decoding="async">
                 </div>
                 <div class="cert-header-text">CERTIFICATE OF FINANCIAL SOBRIETY</div>
                 <div class="cert-subheader">This official document hereby certifies that</div>
@@ -1890,7 +1893,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <span class="footer-logo"><img src="icon.png" alt="The Impulse Judge logo" class="footer-logo-img" width="24" height="24"> The Impulse Judge<sup class="tm">™</sup></span>
+          <span class="footer-logo"><img src="icon.png" alt="The Impulse Judge logo" class="footer-logo-img" width="24" height="24" loading="lazy" decoding="async"> The Impulse Judge<sup class="tm">™</sup></span>
           <p>Your shopping cart's worst nightmare since 2025</p>
         </div>
         <div class="footer-links">
@@ -1923,15 +1926,15 @@
     <div class="sticky-install-content">
       <span class="sticky-install-text">🔥 Ready to save money?</span>
       <a href="https://addons.mozilla.org/en-CA/firefox/addon/the-impulse-judge/" class="btn btn-primary btn-md sticky-install-btn btn-judge" target="_blank" rel="noopener">
-        <img src="icons/firefox.png" alt="Firefox" width="16" height="16" style="margin-right: 6px;">
+        <img src="icons/firefox.png" alt="Firefox" width="16" height="16" class="btn-icon" loading="lazy" decoding="async">
         Add to Firefox
       </a>
       <a href="https://microsoftedge.microsoft.com/addons/detail/the-impulse-judge-financ/fkanlpmkecccloaipnihnnhjioamocbl" class="btn btn-primary btn-md sticky-install-btn btn-judge" target="_blank" rel="noopener">
-        <img src="icons/edge.png" alt="Edge" width="16" height="16" style="margin-right: 6px;">
+        <img src="icons/edge.png" alt="Edge" width="16" height="16" class="btn-icon" loading="lazy" decoding="async">
         Add to Edge
       </a>
       <a href="#install" class="btn btn-primary btn-md sticky-install-btn btn-judge btn-disabled" style="opacity: 0.6; cursor: not-allowed;" onclick="alert('Chrome Web Store submission pending review. Check back soon!'); return false;">
-        <img src="icons/chrome.png" alt="Chrome" width="16" height="16" style="margin-right: 6px;">
+        <img src="icons/chrome.png" alt="Chrome" width="16" height="16" class="btn-icon" loading="lazy" decoding="async">
         Add to Chrome (Coming Soon)
       </a>
     </div>
@@ -7024,7 +7027,7 @@ Can you save more?`;
           }
         } catch (e) {
           // Silent fail - stat just won't show (no tracking, privacy-first)
-          console.log('Hero stat: Using fallback (geo unavailable)');
+          // Fallback to default stats if geo lookup fails
           const region = regionStats['DEFAULT'];
           const amount = region.currency + region.avg.toLocaleString();
           const message = wittyMessages[Math.floor(Math.random() * wittyMessages.length)](region, amount);
