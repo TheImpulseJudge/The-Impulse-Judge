@@ -3747,15 +3747,31 @@ textarea:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   margin-top: 36px;
-  padding: 20px 28px;
+  padding: 24px 28px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   max-width: 440px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+}
+
+.hero-therapy-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 71, 87, 0.5) 50%, 
+    transparent 100%);
+  filter: blur(4px);
+  opacity: 0.6;
 }
 
 .hero-therapy-link > span:first-child {
@@ -3767,41 +3783,121 @@ textarea:focus-visible {
 .hero-therapy-actions {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   width: 100%;
 }
 
 .hero-therapy-item {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   align-items: center;
   text-align: center;
+  position: relative;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  border-left: 4px solid rgba(255, 71, 87, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-therapy-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-left-color: rgba(255, 71, 87, 0.8);
+  box-shadow: 0 4px 20px rgba(255, 71, 87, 0.15),
+              0 0 0 1px rgba(255, 71, 87, 0.1);
+  transform: translateX(2px);
+}
+
+.hero-therapy-featured {
+  border-left-color: rgba(255, 71, 87, 0.6);
+}
+
+.hero-therapy-featured:hover {
+  border-left-color: #ff4757;
+  box-shadow: 0 6px 24px rgba(255, 71, 87, 0.25),
+              0 0 0 1px rgba(255, 71, 87, 0.2);
 }
 
 .btn-therapy {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
+  padding: 13px 24px;
   font-size: 14px;
   font-weight: 600;
   color: white;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #ff4757;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.2);
   width: 100%;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-therapy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-therapy:hover::before {
+  left: 100%;
 }
 
 .btn-therapy:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: #e63946;
   border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   color: white;
+  box-shadow: 0 4px 16px rgba(255, 71, 87, 0.35),
+              0 2px 8px rgba(255, 71, 87, 0.2);
+}
+
+.btn-therapy:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.25);
+}
+
+.hero-therapy-item:hover .btn-therapy {
+  animation: iconBounce 0.6s ease;
+}
+
+@keyframes iconBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.hero-therapy-badge {
+  position: absolute;
+  top: -6px;
+  right: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #ff4757;
+  background: rgba(255, 71, 87, 0.12);
+  border: 1px solid rgba(255, 71, 87, 0.3);
+  border-radius: 8px;
+  padding: 3px 8px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+.hero-therapy-featured:hover .hero-therapy-badge {
+  background: rgba(255, 71, 87, 0.2);
+  border-color: rgba(255, 71, 87, 0.5);
+  opacity: 1;
 }
 
 .hero-therapy-note {
@@ -3811,6 +3907,7 @@ textarea:focus-visible {
   opacity: 0.7;
   display: block;
   line-height: 1.4;
+  padding: 0 4px;
 }
 
 @media (max-width: 600px) {
@@ -3839,19 +3936,40 @@ textarea:focus-visible {
   }
   
   .hero-therapy-link {
-    padding: 16px 18px;
+    padding: 20px 16px;
     max-width: 100%;
     border-radius: 16px;
     margin-top: 24px;
+    gap: 14px;
+  }
+  
+  .hero-therapy-link::before {
+    left: 15%;
+    right: 15%;
   }
   
   .hero-therapy-link > span:first-child {
     font-size: 13px;
   }
   
+  .hero-therapy-item {
+    padding: 8px 10px;
+  }
+  
+  .hero-therapy-badge {
+    font-size: 9px;
+    padding: 2px 6px;
+    top: -5px;
+    right: 6px;
+  }
+  
   .btn-therapy {
-    padding: 11px 20px;
+    padding: 12px 20px;
     font-size: 14px;
+  }
+  
+  .hero-therapy-note {
+    font-size: 10px;
   }
 }
 
@@ -8490,22 +8608,25 @@ textarea:focus-visible {
 }
 
 .hero-mini-signup-btn {
-  padding: 10px 18px;
-  border-radius: var(--radius-md);
-  background: var(--color-primary);
+  padding: 12px 20px;
+  border-radius: 24px;
+  background: #ff4757;
   color: white;
   font-size: 13px;
   font-weight: 600;
   font-family: var(--font-main);
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.25);
 }
 
 .hero-mini-signup-btn:hover {
-  background: var(--color-primary-dark, #d43b5a);
-  transform: translateY(-1px);
+  background: #e63946;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255, 71, 87, 0.35);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .hero-mini-signup-btn:disabled {
