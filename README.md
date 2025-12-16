@@ -107,11 +107,9 @@ Judge is not recording what you buy. Judge is not storing your credit card. Judg
 **(Warning: Installing this is likely to result in a 36% drop in unnecessary dopamine hits.)**
 
 **🟢 Available Now:**
+- **[Chrome Web Store](https://chromewebstore.google.com/detail/the-impulse-judge-roast-y/gfiioapfjkoadablgaamlioioiogilmj)** - Live and ready to judge your Chrome shopping!
 - **[Firefox Add-ons](https://addons.mozilla.org/en-CA/firefox/addon/the-impulse-judge/)** - Live and ready to judge your Firefox shopping!
 - **[Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/the-impulse-judge-financ/fkanlpmkecccloaipnihnnhjioamocbl)** - Live and ready to judge your Edge shopping!
-
-**🟡 Coming Soon (Pending Review):**
-- **Chrome Web Store** - Submission pending approval
 
 ### For Developers (Load Unpacked)
 
@@ -138,7 +136,7 @@ Judge is not recording what you buy. Judge is not storing your credit card. Judg
 ### ⚠️ Official Distribution Sources Only
 
 **Only install The Impulse Judge from official sources:**
-- Chrome Web Store (pending approval)
+- [Chrome Web Store](https://chromewebstore.google.com/detail/the-impulse-judge-roast-y/gfiioapfjkoadablgaamlioioiogilmj) ✅ LIVE
 - [Firefox Add-ons](https://addons.mozilla.org/en-CA/firefox/addon/the-impulse-judge/) ✅ LIVE
 - [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/the-impulse-judge-financ/fkanlpmkecccloaipnihnnhjioamocbl) ✅ LIVE
 - [GitHub Releases](https://github.com/TheImpulseJudge/The-Impulse-Judge/releases) for developers - (Coming Soon)

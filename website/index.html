@@ -8,6 +8,7 @@
   <link rel="dns-prefetch" href="//ipapi.co">
   <link rel="dns-prefetch" href="//buymeacoffee.com">
   <link rel="dns-prefetch" href="//sibforms.com">
+  <link rel="dns-prefetch" href="//chromewebstore.google.com">
   <link rel="dns-prefetch" href="//addons.mozilla.org">
   <link rel="dns-prefetch" href="//microsoftedge.microsoft.com">
   
@@ -240,6 +241,10 @@
           <span class="local-stat-disclaimer">*Approximate regional averages for illustration</span>
         </div>
         <div class="hero-buttons">
+          <a href="https://chromewebstore.google.com/detail/the-impulse-judge-roast-y/gfiioapfjkoadablgaamlioioiogilmj" class="btn btn-primary btn-lg btn-judge" target="_blank" rel="noopener">
+            <img src="icons/chrome.png" alt="Chrome" width="20" height="20" class="btn-icon" loading="lazy" decoding="async">
+            <span>Add to Chrome</span>
+          </a>
           <a href="https://addons.mozilla.org/en-CA/firefox/addon/the-impulse-judge/" class="btn btn-primary btn-lg btn-judge" target="_blank" rel="noopener">
             <img src="icons/firefox.png" alt="Firefox" width="20" height="20" class="btn-icon" loading="lazy" decoding="async">
             <span>Add to Firefox</span>
@@ -247,10 +252,6 @@
           <a href="https://microsoftedge.microsoft.com/addons/detail/the-impulse-judge-financ/fkanlpmkecccloaipnihnnhjioamocbl" class="btn btn-primary btn-lg btn-judge" target="_blank" rel="noopener">
             <img src="icons/edge.png" alt="Edge" width="20" height="20" class="btn-icon" loading="lazy" decoding="async">
             <span>Add to Edge</span>
-          </a>
-          <a href="#install" class="btn btn-primary btn-lg btn-judge btn-disabled btn-chrome-pending" style="opacity: 0.6; cursor: not-allowed;">
-            <img src="icons/chrome.png" alt="Chrome" width="20" height="20" class="btn-icon" loading="lazy" decoding="async">
-            <span>Add to Chrome (Coming Soon)</span>
           </a>
         </div>
         <div class="hero-secondary-links">
@@ -1426,9 +1427,9 @@
           </div>
         </div>
         <div class="cta-buttons">
-          <a href="#chrome-coming-soon" class="btn btn-primary btn-xl btn-store btn-disabled btn-chrome-pending">
+          <a href="https://chromewebstore.google.com/detail/the-impulse-judge-roast-y/gfiioapfjkoadablgaamlioioiogilmj" class="btn btn-primary btn-xl btn-store" target="_blank" rel="noopener">
             <img src="icons/chrome.png" alt="Chrome" class="browser-logo" width="24" height="24" loading="lazy" decoding="async">
-            <span>Chrome (Coming Soon)</span>
+            <span>Add to Chrome</span>
           </a>
           <a href="https://addons.mozilla.org/en-CA/firefox/addon/the-impulse-judge/" class="btn btn-primary btn-xl btn-store" target="_blank" rel="noopener">
             <img src="icons/firefox.png" alt="Firefox" class="browser-logo" width="24" height="24" loading="lazy" decoding="async">
@@ -1925,6 +1926,10 @@
   <div class="sticky-install-bar" id="sticky-install-bar">
     <div class="sticky-install-content">
       <span class="sticky-install-text">🔥 Ready to save money?</span>
+      <a href="https://chromewebstore.google.com/detail/the-impulse-judge-roast-y/gfiioapfjkoadablgaamlioioiogilmj" class="btn btn-primary btn-md sticky-install-btn btn-judge" target="_blank" rel="noopener">
+        <img src="icons/chrome.png" alt="Chrome" width="16" height="16" class="btn-icon" loading="lazy" decoding="async">
+        Add to Chrome
+      </a>
       <a href="https://addons.mozilla.org/en-CA/firefox/addon/the-impulse-judge/" class="btn btn-primary btn-md sticky-install-btn btn-judge" target="_blank" rel="noopener">
         <img src="icons/firefox.png" alt="Firefox" width="16" height="16" class="btn-icon" loading="lazy" decoding="async">
         Add to Firefox
@@ -1932,10 +1937,6 @@
       <a href="https://microsoftedge.microsoft.com/addons/detail/the-impulse-judge-financ/fkanlpmkecccloaipnihnnhjioamocbl" class="btn btn-primary btn-md sticky-install-btn btn-judge" target="_blank" rel="noopener">
         <img src="icons/edge.png" alt="Edge" width="16" height="16" class="btn-icon" loading="lazy" decoding="async">
         Add to Edge
-      </a>
-      <a href="#install" class="btn btn-primary btn-md sticky-install-btn btn-judge btn-disabled btn-chrome-pending" style="opacity: 0.6; cursor: not-allowed;">
-        <img src="icons/chrome.png" alt="Chrome" width="16" height="16" class="btn-icon" loading="lazy" decoding="async">
-        Add to Chrome (Coming Soon)
       </a>
     </div>
   </div>
@@ -1991,18 +1992,6 @@
         setTimeout(() => toast.remove(), 300);
       }, duration);
     }
-    
-    // ============================================
-    // CHROME PENDING BUTTONS (CSP-COMPLIANT)
-    // ============================================
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.btn-chrome-pending').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-          e.preventDefault();
-          showGlobalToast('⏳ Chrome Web Store submission pending review. Check back soon!', 3500);
-        });
-      });
-    });
     
     // Mobile menu toggle
     const navToggle = document.querySelector('.nav-toggle');
